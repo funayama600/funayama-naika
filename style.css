@@ -1,0 +1,432 @@
+/* ===== 色の設定(ここを変えると全体の色が変わります) ===== */
+:root {
+  --green: #2f6b4f;        /* メインの緑 */
+  --green-dark: #214d39;   /* 濃い緑 */
+  --green-soft: #eaf3ed;   /* うすい緑(背景用) */
+  --text: #26332c;         /* 文字色 */
+  --line: #cfe0d5;         /* 線の色 */
+}
+ 
+* { box-sizing: border-box; }
+ 
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Meiryo", sans-serif;
+  color: var(--text);
+  line-height: 1.9;
+  background: #fff;
+}
+ 
+a { color: var(--green); }
+ 
+/* ===== ヘッダー ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 5vw;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-decoration: none;
+}
+.nav { display: flex; gap: 22px; }
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.nav a:hover { color: var(--green); }
+.tel-small {
+  background: var(--green);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+ 
+/* ===== メイン ===== */
+.hero {
+  background: var(--green-soft);
+  padding: 80px 5vw;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.5;
+  color: var(--green-dark);
+  margin: 0 0 20px;
+}
+.hero p {
+  max-width: 34em;
+  margin: 0 0 32px;
+}
+.tel-button {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+.tel-button:hover { background: var(--green-dark); }
+.tel-label { display: block; font-size: 0.85rem; }
+.tel-number { display: block; font-size: 1.8rem; font-weight: 700; letter-spacing: 0.04em; }
+ 
+/* ===== セクション共通 ===== */
+.section { padding: 70px 5vw; }
+.section > * { max-width: 800px; margin-left: auto; margin-right: auto; }
+.section-tint { background: var(--green-soft); }
+.section h2 {
+  font-size: 1.6rem;
+  color: var(--green-dark);
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 14px;
+  border-left: 6px solid var(--green);
+}
+.lead { margin-top: 0; }
+ 
+/* ===== 診療案内 ===== */
+.symptoms {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.symptoms li {
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+ 
+/* ===== 診療時間 ===== */
+.table-wrap { overflow-x: auto; }
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  text-align: center;
+}
+.hours-table th,
+.hours-table td {
+  border: 1px solid var(--line);
+  padding: 12px 8px;
+  white-space: nowrap;
+}
+.hours-table thead th {
+  background: var(--green);
+  color: #fff;
+}
+.hours-table tbody th { background: #fff; text-align: left; padding-left: 14px; }
+.hours-table td { color: var(--green); font-weight: 700; }
+.note { font-size: 0.9rem; margin-top: 16px; }
+ 
+/* ===== 院長あいさつ ===== */
+.doctor {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.doctor-photo {
+  flex: 0 0 180px;
+  height: 220px;
+  background: var(--green-soft);
+  border: 1px dashed var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+}
+.doctor-text p { margin-top: 0; }
+.doctor-name { text-align: right; font-weight: 700; }
+ 
+/* ===== アクセス ===== */
+.info {
+  display: grid;
+  grid-template-columns: 6em 1fr;
+  gap: 10px 16px;
+  margin-bottom: 28px;
+}
+.info dt { font-weight: 700; color: var(--green-dark); }
+.info dd { margin: 0; }
+.map {
+  min-height: 300px;
+  background: #fff;
+  border: 1px dashed var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  overflow: hidden;
+}
+.map iframe { width: 100%; height: 300px; border: 0; }
+ 
+/* ===== フッター ===== */
+.site-footer {
+  background: var(--green-dark);
+  color: #fff;
+  text-align: center;
+  padding: 24px 5vw;
+  font-size: 0.85rem;
+}
+.site-footer p { margin: 0; }
+ 
+/* ===== スマホ表示 ===== */
+@media (max-width: 700px) {
+  .nav { display: none; }
+  .site-header { justify-content: space-between; }
+  .hero { padding: 50px 5vw; }
+  .section { padding: 50px 5vw; }
+  .doctor { flex-direction: column; }
+  .doctor-photo { flex-basis: auto; width: 100%; height: 160px; }
+  .info { grid-template-columns: 1fr; gap: 2px; }
+  .info dd { margin-bottom: 12px; }
+}
+ /* ===== WEB予約ボタン ===== */
+.header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.web-small {
+  background: #d27a45;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.web-small:hover { background: #b8663a; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+.web-button {
+  display: inline-block;
+  background: #d27a45;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+.web-button:hover { background: #b8663a; }
+/* ===== 写真 ===== */
+img { max-width: 100%; }
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+/* ===== 院内の写真 ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 800px;
+}
+.gallery img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .gallery img { height: 140px; }
+}
+/* ===== 初めての方へ ===== */
+.flow {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  counter-reset: step;
+}
+.flow > li {
+  position: relative;
+  counter-increment: step;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px 18px 64px;
+  margin-bottom: 14px;
+}
+.flow > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 32px;
+}
+.flow h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--green-dark);
+}
+.flow p { margin: 0; }
+.caution {
+  margin: 12px 0 0;
+  padding: 12px 16px 12px 32px;
+  background: var(--green-soft);
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+/* ===== 診療科目 ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.service {
+  background: var(--green-soft);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+.service h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--green-dark);
+}
+.service p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.sub-title {
+  font-size: 1.05rem;
+  color: var(--green-dark);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+/* ===== スマホでのボタンをそろえる ===== */
+@media (max-width: 700px) {
+  .hero-buttons { flex-direction: column; }
+  .web-button,
+  .tel-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  .web-button .tel-number,
+  .tel-button .tel-number {
+    font-size: 1.35rem;
+  }
+}
+/* ===== 受付時間 ===== */
+.reception-title {
+  font-size: 1.05rem;
+  color: var(--green-dark);
+  margin: 32px auto 12px;
+}
+/* ===== ロゴ ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+@media (max-width: 700px) {
+  .logo img { height: 32px; }
+}
+
+/* ===== メインの背景に外観写真 ===== */
+.hero {
+  background:
+    linear-gradient(rgba(20, 50, 35, 0.40), rgba(20, 50, 35, 0.40)),
+    url("images/gaikan.jpg") center / cover no-repeat;
+  padding: 110px 5vw;
+}
+.hero h1,
+.hero p {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 60px 5vw; }
+}
+.hero .tel-button {
+  border: 2px solid #fff;
+}
+/* ===== 医師紹介 ===== */
+.doctors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.doctor-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--green-soft);
+  border-radius: 12px;
+  padding: 18px;
+}
+.doctor-card img {
+  flex: 0 0 110px;
+  width: 110px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.doctor-body { flex: 1; }
+.doctor-body p { margin: 0; }
+.doctor-role {
+  font-size: 0.85rem;
+  color: var(--green);
+  font-weight: 700;
+}
+.doctor-body h3 {
+  margin: 2px 0 4px;
+  font-size: 1.25rem;
+  color: var(--green-dark);
+}
+.doctor-field { font-weight: 700; margin-bottom: 8px !important; }
+.doctor-body ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+/* ===== ヘッダーの電話番号(文字のみ) ===== */
+.tel-text {
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 4px;
+}
+/* ===== お知らせの開閉 ===== */
+.news-list details { flex: 1; }
+.news-list summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.news-list details p {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
