@@ -212,7 +212,7 @@ a { color: var(--green); }
   font-weight: 700;
   font-size: 0.95rem;
 }
-.web-small:hover { background: #b8663a; }
+.web-small:hover { background: #247047; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
 .web-button {
   display: inline-block;
@@ -222,7 +222,7 @@ a { color: var(--green); }
   border-radius: 14px;
   text-decoration: none;
 }
-.web-button:hover { background: #b8663a; }
+.web-button:hover { background: #247047; }
 /* ===== 写真 ===== */
 img { max-width: 100%; }
 .banner {
