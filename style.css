@@ -566,3 +566,18 @@ html {
 .news-list details p {
   white-space: pre-line;
 }
+/* ===== 医師の経歴 ===== */
+.doctor-body .career-title {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--green);
+}
+.doctor-body .career {
+  margin-top: 4px;
+}
+.doctors .doctor-card:first-child {
+  grid-column: 1 / -1;
+}
